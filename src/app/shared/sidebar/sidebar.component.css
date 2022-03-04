@@ -1,0 +1,38 @@
+.fondo-historial-elemento {
+  background-color: transparent;
+  color: white;
+  border: 1px white solid;
+}
+
+.contenedor-btn-vaciar {
+  text-align: center;
+}
+
+.btn-vaciar {
+  background-color: rgb(235, 65, 65);
+  color: white;
+  border: none;
+  font-weight: bold;
+}
+
+
+.btn-historial {
+  transition: all .5s ease;
+  color: #fff;
+  border: 2px solid white;
+  text-align: center;
+  line-height: 1;
+  font-size: 17px;
+  background-color: transparent;
+  padding: 10px;
+  margin-top: 5px;
+  outline: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.btn-historial:hover {
+  color: #001F3F;
+  background-color: #fff;
+
+}
