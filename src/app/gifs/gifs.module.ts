@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { GifsMainPageComponent } from './gifs-main-page/gifs-main-page.component';
 import { BusquedaComponent } from './busqueda/busqueda.component';
 import { ResultadosComponent } from './resultados/resultados.component';
+import { MaterialModule } from '../material/material.module';
 
 
 
@@ -14,7 +15,8 @@ import { ResultadosComponent } from './resultados/resultados.component';
     ResultadosComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MaterialModule
   ],
   exports: [
     GifsMainPageComponent

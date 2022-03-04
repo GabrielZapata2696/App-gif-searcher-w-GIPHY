@@ -1,15 +1,31 @@
 <div class="row">
-  <div class="col-md-4 col-sm-6 animate__animated animate__slideInUp" *ngFor="let gif of resultados">
-    <div class="card">
-      <small class="card-title">{{gif.title}} </small>
-      <img [src]="gif.images.downsized_medium.url" [alt]="gif.title" class="card-img-top">
 
-      <div class="card-body">
-        <p class="card-text">
+  <div class="contenedor-btn-cargar-mas">
+    <button class="btn-cargar-mas" (click)="cargarMas()">Cargar más</button>
+  </div>
+  <br>
+  <br>
 
-        </p>
+  <hr>
+  <div class="col-sm-4 animate__animated animate__slideInUp" *ngFor="let gif of resultados">
+    <div class="card contenedor-img  ">
+
+      <img [src]="gif.images.downsized_medium.url" [alt]="gif.title" class="img" (click)="irAFuente(gif.url)">
+
+      <div class="contenedor-btn-compartir ubicar-btns">
+
+        <mat-icon aria-hidden="false" class="btn-facebook mat-icon-rtl-mirror" aria-label="facebook icon"
+          (click)="irAFuente(gif.url)">
+          facebook
+        </mat-icon>
+
+        <mat-icon aria-hidden="false" class="btn-whatsapp mat-icon-rtl-mirror" aria-label="whatsapp icon"
+          (click)="irAFuente(gif.url)">
+          whatsapp
+        </mat-icon>
 
       </div>
+
     </div>
   </div>
 </div>

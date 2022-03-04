@@ -1,0 +1,68 @@
+.contenedor-img {
+  border: none;
+  margin-bottom: 6%;
+}
+
+.contenedor-btn-compartir {
+  display: block;
+  justify-content: space-between;
+
+}
+
+.img {
+  height: max-content;
+}
+
+.img:hover {
+  cursor: pointer;
+
+}
+
+.contenedor-img {
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.contenedor-btn-cargar-mas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-cargar-mas {
+  width: 15%;
+  border: none;
+  font-weight: bold;
+  background-color: rgb(127, 243, 127);
+}
+
+.contenedor-btn-compartir:hover {
+  cursor: pointer;
+
+}
+
+.ubicar-btns {
+  float: right;
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  z-index: 1000;
+  background-color: transparent;
+  padding: 5px;
+
+}
+
+.btn-facebook {
+  color: rgb(71, 71, 251);
+  border: none;
+
+}
+
+.btn-twitter {
+  color: rgb(115, 200, 253);
+  border: none;
+}
+
+.btn-whatsapp {
+  color: rgb(94, 241, 94);
+  border: none;
+}

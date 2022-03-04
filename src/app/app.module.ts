@@ -8,6 +8,8 @@ import { SharedModule } from './shared/shared.module';
 import { CommonModule } from '@angular/common';
 
 import { HttpClientModule } from '@angular/common/http';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material/material.module';
 
 
 @NgModule({
@@ -23,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     SharedModule,
     GifsModule,
-
+    NoopAnimationsModule,
+    MaterialModule
 
   ],
   providers: [],

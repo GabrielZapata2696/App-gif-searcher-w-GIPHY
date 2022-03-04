@@ -1,0 +1,10 @@
+.header-buscador {
+  background-color: red;
+  height: 150px;
+}
+
+.box-header-buscador {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

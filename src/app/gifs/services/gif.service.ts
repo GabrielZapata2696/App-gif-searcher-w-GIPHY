@@ -12,7 +12,7 @@ const API_KEY: string = `${environment.API_KEY}`;
 export class GifService {
 
   private _historial: string[] = [];
-
+  offset: number = 0;
   public resultados: Gif[] = [];
 
   constructor(
@@ -25,11 +25,11 @@ export class GifService {
 
 
   get obtenerHistorial() {
-
     return [...this._historial];
   }
 
-  buscarGifs(busqueda: string, limite: number) {
+
+  buscarGifs(busqueda: string, limite: number, offsetEnviado: number) {
     busqueda = busqueda.trim().toLowerCase();
 
     if (!this._historial.includes(busqueda)) {
@@ -39,13 +39,19 @@ export class GifService {
 
     }
 
+    this.offset = this.offset + offsetEnviado;
+
     const params = new HttpParams()
       .set('api_key', API_KEY)
       .set('q', busqueda)
-      .set('limit', `${limite}`);
+      .set('limit', `${limite}`)
+      .set('offset', `${this.offset}`)
+      ;
 
     this.http.get<SearchGifsResponse>(`${API_URL}/search`, { params })
       .subscribe((resp: SearchGifsResponse) => {
+        this.resultados = [];
+        localStorage.removeItem('previo');
         this.resultados = resp.data;
         localStorage.setItem('previo', JSON.stringify(this.resultados));
       });

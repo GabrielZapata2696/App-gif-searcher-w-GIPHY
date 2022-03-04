@@ -11,7 +11,7 @@ export class BusquedaComponent implements OnInit {
 
   @ViewChild('txtBuscar') buscador!: ElementRef<HTMLInputElement>;
 
-  limite: number = 10;
+  limite: number = 9;
 
 
   constructor(
@@ -26,8 +26,8 @@ export class BusquedaComponent implements OnInit {
     const filtro = this.buscador.nativeElement.value;
 
     if (filtro.trim().length === 0) { return; }
-
-    this.gifService.buscarGifs(filtro, this.limite);
+    this.gifService.offset = 0;
+    this.gifService.buscarGifs(filtro, this.limite, 10);
     this.buscador.nativeElement.value = '';
 
   }
